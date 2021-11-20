@@ -1,13 +1,17 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 
+import Login from '../../screens/Login';
+import Tasks from '../../screens/Tasks';
+
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to React Router!</h1>
       <Routes>
         <Route path="/" element={<div>Container</div>} />
-        <Route path="login" element={<div>Login</div>} />
+        <Route path="login" element={<Login />} />
+        <Route path="tarefas" element={<Tasks />} />
+        <Route path="*" element={<div>Página não encontrada</div>} />
       </Routes>
     </div>
   );
